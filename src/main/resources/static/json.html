@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script >
+	var sv = {
+			"name": "Nguen thi a",
+			"gender": true,
+			"marks": 7.5,
+			"contact":{
+				"email": "nguyenthia@gmail.com",
+				"phone": "0123456"
+			},
+			"subjects": ["WEB205", "COM108"]
+	
+	}
+	
+	//xuat doi tuong
+	console.log(sv);
+	
+	//truy xuat thuoc tinh
+	sv.name = sv['name'].toUpperCase();
+	console.log(sv.name, sv.contact.email, sv.subjects[0]);
+	
+	//duyet doi tuong theo key
+	for(var key in sv){
+		console.log(key, sv[key])
+	}
+	
+	//chuyen doi doi tuong Json sang chuoi
+	var text = JSON.stringify(sv)
+	console.log(text)
+	
+	//chuyen doi chuoi sang doi tuong JSON
+	var obj = JSON.parse(text);
+	console.log(obj, obj.name)
+	
+	
+	</script>
+</body>
+</html>
